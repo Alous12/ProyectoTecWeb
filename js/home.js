@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	carousel.addEventListener('mouseenter', stopAutoplay);
 	carousel.addEventListener('mouseleave', startAutoplay);
 
-	// Soporte táctil básico para deslizar en móvil.
 	let touchStartX = 0;
 	let touchEndX = 0;
 

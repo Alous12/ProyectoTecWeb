@@ -370,6 +370,16 @@ header .btn-reservar:hover {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
   }
 }
+.card-habitacion {
+  transition: all 0.3s ease;
+}
+.card-habitacion:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
 .hero-habitaciones {
   background-color: #973C00;
   color: #ffffff;
@@ -423,16 +433,26 @@ header .btn-reservar:hover {
   background-color: #fdfaf5;
   padding: 3rem 10%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 .grid-habitaciones .card-habitacion {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
   background: #ffffff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+.grid-habitaciones .card-habitacion[style*="display: none"] {
+  opacity: 0;
+  transform: scale(0.95);
 }
 .grid-habitaciones .card-habitacion .image-container {
   position: relative;

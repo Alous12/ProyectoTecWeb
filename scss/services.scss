@@ -1,12 +1,21 @@
 @use 'sass:color';
 @use 'variables' as v;
 
-// 1. El cuadro café (Hero)
+.card-habitacion{
+    transition: all 0.3s ease;  
+    &:hover{
+        background-color: #f0f0f0;
+        transform: translateY(-10px); 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+}
+
 .hero-habitaciones {
-    background-color: v.$color-primario; // Color café institucional
+    background-color: v.$color-primario;
     color: v.$color-blanco;
     text-align: center;
-    padding: 4rem 1rem 6rem; // Más padding abajo para dar aire
+    padding: 4rem 1rem 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,13 +33,11 @@
     }
 }
 
-// 2. Contenedor de botones (Fuera del cuadro café)
 .contenedor-filtros {
-    background-color: v.$color-blanco; // Fondo blanco según la foto
-    padding: 2rem 0; // Espaciado vertical para separar del Hero y las Cards
+    background-color: v.$color-blanco;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
-
     .filtros {
         display: flex;
         gap: 15px;
@@ -40,7 +47,7 @@
             padding: 0.6rem 2rem;
             border: none;
             border-radius: 8px;
-            background-color: #f1f5f9; // Gris claro para inactivos
+            background-color: #f1f5f9;
             color: #475569;
             font-weight: 500;
             cursor: pointer;
@@ -51,7 +58,7 @@
             }
 
             &.active {
-                background-color: v.$color-primario; // El activo es café
+                background-color: v.$color-primario;
                 color: v.$color-blanco;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
@@ -63,17 +70,27 @@
     background-color: v.$color-fondo-claro;
     padding: 3rem 10%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 
     .card-habitacion {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
         background: v.$color-blanco;
         border-radius: v.$border-radius;
         overflow: hidden;
         box-shadow: v.$sombra-card;
         display: flex;
         flex-direction: column;
+        transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+        opacity: 1;
+        transform: scale(1);
 
+        &[style*="display: none"] {
+            opacity: 0;
+            transform: scale(0.95);
+        }
         .image-container {
             position: relative;
             height: 200px;

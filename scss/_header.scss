@@ -5,7 +5,7 @@ header {
     background-color: v.$color-blanco;
     padding: 1rem 10%;
     display: flex;
-    align-items: center; // Alinea verticalmente todos los elementos
+    align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
@@ -19,14 +19,13 @@ header {
         font-weight: bold;
         font-size: 1.4rem;
         
-        // Empuja todo lo que viene después a la derecha
         margin-right: auto; 
 
         img { height: 35px; }
     }
 
     nav {
-        margin-right: 30px; // Espacio entre el menú y el botón de reservar
+        margin-right: 30px;
 
         ul {
             display: flex;
