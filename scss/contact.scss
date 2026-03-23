@@ -1,0 +1,256 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+.hero-title {
+    background-color: $color-primario; 
+    color: $color-blanco;
+    text-align: center;
+    padding: 4rem 1rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-content {
+        h1 { 
+            font-size: 3rem; 
+            margin-bottom: 1rem; 
+            font-weight: 600; 
+        }
+        p { 
+            font-size: 1.1rem; 
+            opacity: 0.85; 
+        }
+    }
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+    align-items: flex-start;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        margin-top: -2rem;
+    }
+}
+
+// Estilos base para ambas tarjetas
+.contact-card {
+    background-color:   $color-blanco;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    h2 {
+        font-size: 1.8rem;
+        color: $color-negro-suave;
+        margin-bottom: 2rem;
+    }
+}
+
+// --- TARJETA IZQUIERDA: INFO DE CONTACTO ---
+.info-card {
+    flex: 1;
+    max-width: 400px;
+
+    @media (max-width: 992px) {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .info-item {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 1.8rem;
+
+        .icon-box {
+            background-color: rgba($color-primario, 0.15);
+            color: $color-primario;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .info-text {
+            strong {
+                display: block;
+                color: $color-negro-suave;
+                margin-bottom: 0.3rem;
+                font-size: 1.05rem;
+            }
+            p {
+                color: #666;
+                font-size: 0.95rem;
+                line-height: 1.4;
+                margin: 0;
+            }
+            .highlight {
+                color: $color-primario;
+            }
+        }
+    }
+
+    .map-placeholder {
+        background-color: #e5e7eb;
+        border-radius: 8px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #6b7280;
+        margin-top: 2rem;
+
+        .map-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+// --- TARJETA DERECHA: FORMULARIO ---
+.form-card {
+    flex: 2;
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; // Una sola columna en móviles
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label {
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: $color-negro-suave;
+            }
+
+            input, textarea {
+                padding: 0.8rem 1rem;
+                border: 1px solid #d1d5db;
+                border-radius: 6px;
+                font-family: inherit;
+                font-size: 0.95rem;
+                outline: none;
+                transition: border-color 0.3s;
+
+                &:focus {
+                    border-color: $color-primario;
+                }
+            }
+        }
+    }
+
+    .btn-submit {
+        background-color: $color-primario;
+        color:  $color-blanco;
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: color.scale($color-primario, $lightness: -15%);
+        }
+    }
+
+    .form-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #9ca3af;
+        margin-top: 1rem;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; 
+
+    &.active {
+        display: flex; 
+    }
+
+    .modal-content {
+        background-color: $color-blanco;
+        padding: 2.5rem;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 450px;
+        width: 90%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        animation: modalFadeIn 0.3s ease; 
+
+        .modal-icon {
+            font-size: 3.5rem;
+            color: #10b981; 
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: $color-negro-suave;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background-color: $color-primario;
+            color: $color-blanco;
+            border: none;
+            padding: 0.8rem 2.5rem;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            
+            &:hover {
+                background-color: color.scale($color-primario, $lightness: -15%);
+            }
+        }
+    }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
