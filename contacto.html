@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexo Urbano Contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/NexoUrbanoIcon.png" alt="Logo Nexo Urbano"> 
+            <span>Nexo Urbano</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="btn-reservar">Reservar</button>
+    </header>
+
+    <main>
+        <section class="hero-title">
+            <div class="hero-content">
+                <h1>Contacto & Reservas</h1>
+                <p>Estamos aquí para ayudarte a planificar tu estadía perfecta</p>
+            </div>
+        </section>
+        <section class="contact-wrapper">
+            
+            <article class="contact-card info-card">
+                <h2>Información de Contacto</h2>
+                
+                <div class="info-item">
+                    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-text">
+                        <strong>Dirección</strong>
+                        <p>Av. Principal 123<br>Cochabamba, Bolivia</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-text">
+                        <strong>Teléfono</strong>
+                        <p class="highlight">+591 4 412-3456</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info-text">
+                        <strong>Email</strong>
+                        <p class="highlight">info@hotelparaiso.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-box"><i class="fa-solid fa-clock"></i></div>
+                    <div class="info-text">
+                        <strong>Horario</strong>
+                        <p>Atención 24/7<br>Todos los días del año</p>
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    <i class="fa-solid fa-location-dot map-icon"></i>
+                    <p>Mapa de Ubicación</p>
+                </div>
+            </article>
+
+            <article class="contact-card form-card">
+                <h2>Formulario de Reserva</h2>
+                
+                <form action="#" method="POST">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" placeholder="juan@ejemplo.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" placeholder="+591 7 123-4567" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="huespedes">Número de Huéspedes *</label>
+                            <input type="number" id="huespedes" placeholder="1" min="1" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="entrada">Fecha de Entrada *</label>
+                            <input type="date" id="entrada" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="salida">Fecha de Salida *</label>
+                            <input type="date" id="salida" required>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="tipo">Tipo de Habitación</label>
+                            <input type="text" id="tipo" placeholder="Ej: Suite Matrimonial">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="mensaje">Mensaje o Peticiones Especiales</label>
+                            <textarea id="mensaje" rows="4" placeholder="¿Tienes alguna petición especial? Déjanos saber..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Enviar Solicitud de Reserva</button>
+                    <p class="form-note">* Campos requeridos</p>
+                </form>
+            </article>
+        </section>
+    </main>
+    <div id="modal-reserva" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>¡Solicitud Recibida!</h3>
+            <p id="modal-mensaje"></p>
+            <button id="btn-cerrar-modal">Aceptar</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-brand">
+                    <img src="/assets/NexoUrbanoIconAmarillo.png" alt="Logo">
+                    <h4 class="footer-title">Nexo Urbano</h4>
+                </div>
+                <p>Un destino de lujo y confort donde cada momento se convierte en un recuerdo inolvidable.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-title">Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="habitaciones.html">Habitaciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 class="footer-title">Contacto</h4>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Av. Principal 123, Cochabamba, Bolivia</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+591 4 412-3456</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>info@nexourbano.com</p>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="footer-title">Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nexo Urbano. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
