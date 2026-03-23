@@ -1,0 +1,134 @@
+@use 'sass:color';
+@use 'variables' as v;
+
+// 1. El cuadro café (Hero)
+.hero-habitaciones {
+    background-color: v.$color-primario; // Color café institucional
+    color: v.$color-blanco;
+    text-align: center;
+    padding: 4rem 1rem 6rem; // Más padding abajo para dar aire
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-content {
+        h1 { 
+            font-size: 3rem; 
+            margin-bottom: 1rem; 
+            font-weight: 600; 
+        }
+        p { 
+            font-size: 1.1rem; 
+            opacity: 0.85; 
+        }
+    }
+}
+
+// 2. Contenedor de botones (Fuera del cuadro café)
+.contenedor-filtros {
+    background-color: v.$color-blanco; // Fondo blanco según la foto
+    padding: 2rem 0; // Espaciado vertical para separar del Hero y las Cards
+    display: flex;
+    justify-content: center;
+
+    .filtros {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        button {
+            padding: 0.6rem 2rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #f1f5f9; // Gris claro para inactivos
+            color: #475569;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: color.scale(#f1f5f9, $lightness: -5%);
+            }
+
+            &.active {
+                background-color: v.$color-primario; // El activo es café
+                color: v.$color-blanco;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+.grid-habitaciones {
+    background-color: v.$color-fondo-claro;
+    padding: 3rem 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .card-habitacion {
+        background: v.$color-blanco;
+        border-radius: v.$border-radius;
+        overflow: hidden;
+        box-shadow: v.$sombra-card;
+        display: flex;
+        flex-direction: column;
+
+        .image-container {
+            position: relative;
+            height: 200px;
+            img { width: 100%; height: 100%; object-fit: cover; }
+            
+            .precio {
+                position: absolute;
+                top: 10px; right: 10px;
+                background: rgba(v.$color-primario, 0.9);
+                color: white;
+                padding: 4px 12px;
+                border-radius: 4px;
+                font-size: 0.85rem;
+            }
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+
+            h3 { color: v.$color-negro-suave; margin-bottom: 0.5rem; }
+            .capacidad { color: v.$color-gris-texto; font-size: 0.9rem; margin-bottom: 1rem; }
+            .descripcion { color: v.$color-gris-texto; font-size: 0.95rem; line-height: 1.4; }
+
+            .amenidades {
+                margin: 1.5rem 0;
+                h4 { font-size: 0.9rem; margin-bottom: 0.5rem; color: v.$color-negro-suave; }
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 5px;
+                    list-style: none;
+                    li {
+                        background: #f0f0f0;
+                        padding: 3px 8px;
+                        border-radius: 4px;
+                        font-size: 0.75rem;
+                        color: #666;
+                    }
+                }
+            }
+
+            .btn-accion {
+                width: 100%;
+                background: v.$color-primario;
+                color: white;
+                border: none;
+                padding: 0.8rem;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.2s;
+
+                &:hover { transform: scale(1.02); }
+            }
+        }
+    }
+}

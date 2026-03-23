@@ -1,0 +1,63 @@
+@use 'sass:color';
+@use 'variables' as v;
+
+header {
+    background-color: v.$color-blanco;
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center; // Alinea verticalmente todos los elementos
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: v.$color-primario;
+        font-weight: bold;
+        font-size: 1.4rem;
+        
+        // Empuja todo lo que viene después a la derecha
+        margin-right: auto; 
+
+        img { height: 35px; }
+    }
+
+    nav {
+        margin-right: 30px; // Espacio entre el menú y el botón de reservar
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+
+            li a {
+                text-decoration: none;
+                color: v.$color-negro-suave;
+                font-weight: 500;
+                transition: color 0.3s;
+
+                &:hover, &.active {
+                    color: v.$color-primario;
+                }
+            }
+        }
+    }
+
+    .btn-reservar {
+        background-color: v.$color-primario;
+        color: v.$color-blanco;
+        padding: 0.6rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: color.scale(v.$color-primario, $lightness: -15%);
+        }
+    }
+}

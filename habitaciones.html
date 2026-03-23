@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexo Urbano - Nuestras Habitaciones</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/NexoUrbanoIcon.png" alt="Logo Nexo Urbano"> 
+            <span>Nexo Urbano</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html" class="active">Habitaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="btn-reservar">Reservar</button>
+    </header>
+
+    <main>
+        <section class="hero-habitaciones">
+            <div class="hero-content">
+                <h1>Nuestras Habitaciones</h1>
+                <p>Encuentra el espacio perfecto para tu estadía</p>
+            </div>
+        </section>
+
+        <div class="contenedor-filtros">
+            <div class="filtros">
+                <button class="filter-btn active" data-filter="todas">Todas</button>
+                <button class="filter-btn" data-filter="estandar">Estándar</button>
+                <button class="filter-btn" data-filter="deluxe">Deluxe</button>
+                <button class="filter-btn" data-filter="suites">Suites</button>
+            </div>
+        </div>
+
+    <section class="grid-habitaciones" id="habitaciones-container">
+        
+        <article class="card-habitacion" data-category="estandar">
+            <div class="image-container">
+                <img src="images/habitacion-estandar.jpg" alt="Interior de Habitación Estándar">
+                <span class="precio">$250/noche</span>
+            </div>
+            <div class="card-content">
+                <h3>Habitación Estándar</h3>
+                <p class="capacidad">Hasta 2 personas</p>
+                <p class="descripcion">Habitación confortable con todas las amenidades básicas para una estadía agradable.</p>
+                <div class="amenidades">
+                    <ul>
+                        <li>WiFi</li>
+                        <li>TV</li>
+                        <li>Aire Acondicionado</li>
+                        <li>Baño Privado</li>
+                    </ul>
+                </div>
+                <button class="btn-accion">Reservar Ahora</button>
+            </div>
+        </article>
+
+        <article class="card-habitacion" data-category="deluxe">
+            <div class="image-container">
+                <img src="images/habitacion-deluxe.jpg" alt="Vista de Habitación Deluxe">
+                <span class="precio">$420/noche</span>
+            </div>
+            <div class="card-content">
+                <h3>Habitación Deluxe</h3>
+                <p class="capacidad">Hasta 2 personas</p>
+                <p class="descripcion">Elegancia y confort en un espacio más amplio con vistas espectaculares.</p>
+                <div class="amenidades">
+                    <ul>
+                        <li>WiFi</li>
+                        <li>TV Smart</li>
+                        <li>Aire Acondicionado</li>
+                        <li>Minibar</li>
+                        <li>Vista Panorámica</li>
+                    </ul>
+                </div>
+                <button class="btn-accion">Reservar Ahora</button>
+            </div>
+        </article>
+
+        <article class="card-habitacion" data-category="suites">
+            <div class="image-container">
+                <img src="images/suite-junior.jpg" alt="Interior de Suite Junior">
+                <span class="precio">$650/noche</span>
+            </div>
+            <div class="card-content">
+                <h3>Suite Junior</h3>
+                <p class="capacidad">Hasta 3 personas</p>
+                <p class="descripcion">Amplitud y lujo con sala de estar separada y servicios premium.</p>
+                <div class="amenidades">
+                    <ul>
+                        <li>WiFi</li>
+                        <li>TV Smart</li>
+                        <li>Aire Acondicionado</li>
+                        <li>Minibar</li>
+                        <li>Sala de Estar</li>
+                        <li>Jacuzzi</li>
+                    </ul>
+                </div>
+                <button class="btn-accion">Reservar Ahora</button>
+            </div>
+        </article>
+
+        <article class="card-habitacion" data-category="suites">
+            <div class="image-container">
+                <img src="images/suite-ejecutiva.jpg" alt="Interior de Suite Ejecutiva">
+                <span class="precio">$850/noche</span>
+            </div>
+            <div class="card-content">
+                <h3>Suite Ejecutiva</h3>
+                <p class="capacidad">Hasta 3 personas</p>
+                <p class="descripcion">Diseñada para ejecutivos que buscan confort y funcionalidad con área de trabajo.</p>
+                <div class="amenidades">
+                    <ul>
+                        <li>WiFi</li>
+                        <li>TV Smart</li>
+                        <li>Área de Trabajo</li>
+                        <li>Balcón Privado</li>
+                        <li>Minibar</li>
+                    </ul>
+                </div>
+                <button class="btn-accion">Reservar Ahora</button>
+            </div>
+        </article>
+
+        <article class="card-habitacion" data-category="suites">
+            <div class="image-container">
+                <img src="images/suite-romantica.jpg" alt="Interior de Suite Romántica decorada">
+                <span class="precio">$950/noche</span>
+            </div>
+            <div class="card-content">
+                <h3>Suite Romántica</h3>
+                <p class="capacidad">Hasta 2 personas</p>
+                <p class="descripcion">El ambiente perfecto para parejas que buscan una experiencia inolvidable decorada especialmente.</p>
+                <div class="amenidades">
+                    <ul>
+                        <li>WiFi</li>
+                        <li>Decoración Especial</li>
+                        <li>Jacuzzi</li>
+                        <li>Minibar</li>
+                    </ul>
+                </div>
+                <button class="btn-accion">Reservar Ahora</button>
+            </div>
+        </article>
+
+        <article class="card-habitacion" data-category="suites">
+            <div class="image-container">
+                <img src="images/penthouse.jpg" alt="Vista desde el Penthouse">
+                <span class="precio">$1500/noche</span>
+            </div>
+            <div class="card-content">
+                <h3>Penthouse</h3>
+                <p class="capacidad">Hasta 4 personas</p>
+                <p class="descripcion">La experiencia de lujo definitiva con vistas de 360 grados de la ciudad y mayordomo.</p>
+                <div class="amenidades">
+                    <ul>
+                        <li>Servicio de Mayordomo</li>
+                        <li>Terraza Privada</li>
+                        <li>Cocina</li>
+                        <li>WiFi</li>
+                    </ul>
+                </div>
+                <button class="btn-accion">Reservar Ahora</button>
+            </div>
+        </article>
+
+    </section>
+
+        <section class="ayuda-contacto">
+            <h2>¿Necesitas ayuda para elegir?</h2>
+            <p>Nuestro equipo está disponible 24/7 para ayudarte...</p>
+            <a href="contacto.html" class="btn-contacto">Contáctanos</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-brand">
+                    <img src="/assets/NexoUrbanoIconAmarillo.png" alt="Logo">
+                    <h4 class="footer-title">Nexo Urbano</h4>
+                </div>
+                <p>Un destino de lujo y confort donde cada momento se convierte en un recuerdo inolvidable.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-title">Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="habitaciones.html">Habitaciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 class="footer-title">Contacto</h4>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Av. Principal 123, Cochabamba, Bolivia</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+591 4 412-3456</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>info@nexourbano.com</p>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="footer-title">Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nexo Urbano. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

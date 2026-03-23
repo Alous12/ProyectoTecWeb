@@ -1,0 +1,26 @@
+@use 'variables' as v;
+@use 'header';
+@use 'services';
+@use 'footer';
+
+// Reset Global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; // O la que prefieras
+    background-color: v.$color-fondo-claro;
+    color: v.$color-negro-suave;
+}
+
+// Media Query Global para Responsive [cite: 109, 178]
+@media (max-width: v.$tablet) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        nav ul { gap: 10px; font-size: 0.9rem; }
+    }
+}
