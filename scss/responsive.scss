@@ -2,13 +2,13 @@
 
 @media (min-width: v.$tablet) {
     .grid-habitaciones {
-        grid-template-columns: repeat(2, 1fr); // 2 tarjetas en tablet [cite: 111]
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: v.$desktop) {
     .grid-habitaciones {
-        grid-template-columns: repeat(3, 1fr); // 3 tarjetas en escritorio [cite: 110]
+        grid-template-columns: repeat(3, 1fr);
         padding: 4rem 10%;
     }
 }

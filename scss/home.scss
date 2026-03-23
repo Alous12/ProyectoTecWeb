@@ -17,7 +17,6 @@
 		padding: 2rem 10%;
 		isolation: isolate;
 
-		// Overlay oscuro para mejorar legibilidad del texto sobre las imágenes.
 		&::before {
 			content: '';
 			position: absolute;

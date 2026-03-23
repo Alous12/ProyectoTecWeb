@@ -450,6 +450,11 @@ header .btn-reservar:hover {
   opacity: 1;
   transform: scale(1);
 }
+.grid-habitaciones .card-habitacion:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
 .grid-habitaciones .card-habitacion[style*="display: none"] {
   opacity: 0;
   transform: scale(0.95);
@@ -525,6 +530,37 @@ header .btn-reservar:hover {
 }
 .grid-habitaciones .card-habitacion .card-content .btn-accion:hover {
   transform: scale(1.02);
+}
+
+.btn-scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #95531d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+.btn-scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.btn-scroll-top:hover {
+  transform: scale(1.1);
 }
 
 .ayuda-contacto {
