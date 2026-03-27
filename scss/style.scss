@@ -16,11 +16,3 @@ body {
     background-color: v.$color-fondo-claro;
     color: v.$color-negro-suave;
 }
-
-@media (max-width: v.$tablet) {
-    header {
-        flex-direction: column;
-        gap: 1rem;
-        nav ul { gap: 10px; font-size: 0.9rem; }
-    }
-}
